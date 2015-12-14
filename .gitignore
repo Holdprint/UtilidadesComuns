@@ -5,5 +5,7 @@ UtilidadesComuns.Testes/bin
 UtilidadesComuns.Testes/obj
 UtilidadesComuns/bin
 UtilidadesComuns/obj
+UtilidadesComuns/nuget/*.*
+
 
 nuget.exe

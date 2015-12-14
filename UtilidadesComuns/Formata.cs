@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace UtilidadesComuns
+namespace Holdprint.Utils
 {
     /// <summary>
     /// Classe utilizada para formatar números, documentos, telefones, etc.
@@ -8,8 +8,7 @@ namespace UtilidadesComuns
     public static class Formata
     {
         /// <summary>
-        /// Formata um número de acordo com o padrão da NFe (três blocos separados por ponto). 
-        /// Ex.: 12 -> 000.000.012
+        /// Formata um número de acordo com o padrão da NFe (três blocos separados por ponto). Ex.: 12 -> 000.000.012 
         /// </summary>
         /// <param name="nroNota">Número a ser formatado</param>
         /// <returns>Número da NFe formatado com o padrão do Danfe</returns>

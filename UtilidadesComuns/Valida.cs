@@ -3,10 +3,15 @@ using System.Linq;
 
 using static System.Convert;
 
-namespace UtilidadesComuns
+namespace Holdprint.Utils
 {
-    public class Valida
+    public static class Valida
     {
+        /// <summary>
+        /// Define se o cpf passado por parâmetro é válido ou não
+        /// </summary>
+        /// <param name="cpf">cpf de entrada</param>
+        /// <returns>true se for um cpf válido; false, caso contrário</returns>
         public static bool Cpf(long cpf)
         {
             //Algoritmo retirado de http://www.geradorcpf.com/algoritmo_do_cpf.htm
@@ -17,8 +22,7 @@ namespace UtilidadesComuns
                 return false;
 
             var listCpf = strCpf.Select(num => ToInt32(num.ToString())).ToList();
-            //listCpf.RemoveRange(10, 2);
-
+            
             if (listCpf[9] != Mod11Cpf(listCpf, 10))
                 return false;
 
@@ -44,6 +48,11 @@ namespace UtilidadesComuns
             return dv1;
         }
 
+        /// <summary>
+        /// Define se o cnpj passado por parâmetro é válido ou não
+        /// </summary>
+        /// <param name="cnpj">cnpj de entrada</param>
+        /// <returns>true se for um cnpj válido; false, caso contrário</returns>
         public static bool Cnpj(long cnpj)
         {
             //Algoritmo retirado de http://www.geradorcpf.com/algoritmo_do_cnpj.htm

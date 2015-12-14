@@ -51,5 +51,19 @@ namespace UtilidadesComuns.Testes
         {
             Assert.IsFalse(Valida.Cnpj(cnpj));
         }
+
+        [Test]
+        [TestCase(3319085069)]
+        public void FormataCpf(long cpf)
+        {
+            var formatado = Formata.Cpf(cpf);
+        }
+
+        [Test]
+        [TestCase(6538964000128)]
+        public void FormataCnpj(long cnpj)
+        {
+            var formatado = Formata.Cnpj(cnpj);
+        }
     }
 }
